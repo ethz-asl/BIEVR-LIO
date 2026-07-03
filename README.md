@@ -5,17 +5,17 @@
 # BIEVR-LIO: Robust LiDAR-Inertial Odometry through Bump-Image-Enhanced Voxel Maps
 
 <p align="center">
-<a href="https://patripfr.github.io/bievr-lio/"><img src="https://img.shields.io/badge/Project-Page-blue?style=flat-square" alt="Project Page" /></a>
-<a href="https://arxiv.org/abs/2604.14421"><img src="https://img.shields.io/badge/arXiv-2604.14421-b31b1b?logo=arxiv&style=flat-square" alt="arXiv" /></a>
-<a href="https://arxiv.org/pdf/2604.14421"><img src="https://img.shields.io/badge/Paper-PDF-b31b1b?style=flat-square" alt="Paper PDF" /></a>
-<a href="LICENSE"><img src="https://img.shields.io/badge/License-BSD--3--Clause-green?style=flat-square" alt="License: BSD-3-Clause" /></a>
-<a href="https://youtu.be/TsDJOdthhNk"><img src="https://img.shields.io/badge/YouTube-Video-red?logo=youtube&style=flat-square" alt="YouTube" /></a>
+<a href="https://patripfr.github.io/bievr-lio/"><img src="https://shieldcn.dev/badge/Project-Page-gray?size=xs" alt="Project Page" /></a>
+<a href="https://arxiv.org/abs/2604.14421"><img src="https://shieldcn.dev/badge/arXiv-2604.14421-b31b1b?logo=arxiv&size=xs" alt="arXiv" /></a>
+<a href="https://arxiv.org/pdf/2604.14421"><img src="https://shieldcn.dev/badge/Paper-PDF-black?size=xs" alt="Paper PDF" /></a>
+<a href="LICENSE"><img src="https://shieldcn.dev/badge/License-BSD--3--Clause-green?size=xs" alt="License: BSD-3-Clause" /></a>
+<a href="https://youtu.be/TsDJOdthhNk"><img src="https://shieldcn.dev/badge/YouTube-red?logo=youtube&size=xs" alt="YouTube" /></a>
 </p>
 
 <p align="center">
-<a href="https://github.com/ethz-asl/BIEVR-LIO"><img src="https://img.shields.io/badge/-C++-blue?logo=cplusplus&style=flat-square" /></a>
-<a href="https://github.com/ethz-asl/BIEVR-LIO"><img src="https://img.shields.io/badge/ROS-Noetic-blue?style=flat-square" alt="ROS1" /></a>
-<a href="https://github.com/ethz-asl/BIEVR-LIO"><img src="https://img.shields.io/badge/ROS2-Jazzy-blue?style=flat-square" alt="ROS2" /></a>
+<a href="https://github.com/ethz-asl/BIEVR-LIO"><img src="https://shieldcn.dev/badge/-C++-blue?logo=cplusplus&size=xs" /></a>
+<a href="https://github.com/ethz-asl/BIEVR-LIO"><img src="https://shieldcn.dev/badge/ROS-Noetic-blue?size=xs" alt="ROS1" /></a>
+<a href="https://github.com/ethz-asl/BIEVR-LIO"><img src="https://shieldcn.dev/badge/ROS2-Jazzy-blue?size=xs" alt="ROS2" /></a>
 </p>
 
 <p align="center">
