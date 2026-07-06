@@ -1,0 +1,69 @@
+name: 'Ubuntu 22.04 + ROS Humble: Build  '
+on:
+  push:
+    branches:
+    - 'main'
+    - 'feature/humble-ci'
+  pull_request:
+    branches:
+    - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - {name: 'Ubuntu 22.04 + ROS Humble: Build  ', rosdistro: 'humble', container: 'osrf/ros:humble-desktop-full'}
+    container: ${{ matrix.config.container }}
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup ccache
+      shell: bash
+      run: |
+        apt update && apt install -y ccache
+        export PATH="/usr/lib/ccache:$PATH"
+        export CCACHE_DIR=$HOME/colcon_ws/ccache
+        export CCACHE_STAMP=$(date +%Y-%m-%d_%H-%M-%S)
+        echo "Updated PATH=$PATH"
+        echo "Set CCACHE_DIR=$CCACHE_DIR"
+        echo "Set CCACHE_STAMP=$CCACHE_STAMP"
+        echo "CCACHE_DIR=$CCACHE_DIR" >> $GITHUB_ENV
+        echo "CCACHE_STAMP=$CCACHE_STAMP" >> $GITHUB_ENV
+        echo "PATH=$PATH" >> $GITHUB_ENV
+        mkdir -p $CCACHE_DIR
+        ccache --max-size=1G
+
+    - name: Cache ccache files
+      uses: actions/cache@v4
+      with:
+        path: ${{ env.CCACHE_DIR }}
+        key: ${{ matrix.config.name }}-ccache-${{ env.CCACHE_STAMP }}
+        restore-keys: |
+          ${{ matrix.config.name }}-ccache-
+
+    - name: Install System Deps on Humble
+      if: ${{ matrix.config.container == 'osrf/ros:humble-desktop-full' }}
+      run: |
+        sudo apt update
+        sudo apt-get install -y python3-colcon-common-extensions python3-vcstool
+        sudo apt-get install -y git build-essential cmake ninja-build \
+          libeigen3-dev libgoogle-glog-dev libtbb-dev libyaml-cpp-dev
+        chmod +x $GITHUB_WORKSPACE/docker/scripts/install_ceres.sh
+        sudo $GITHUB_WORKSPACE/docker/scripts/install_ceres.sh
+
+    - name: Release Build Test
+      env:
+        DEBIAN_FRONTEND: noninteractive
+      shell: bash
+      run: |
+        source /opt/ros/${{ matrix.config.rosdistro }}/setup.bash
+        mkdir -p $HOME/colcon_ws/src
+        cd $HOME/colcon_ws/src
+        ln -s $GITHUB_WORKSPACE
+        cd $HOME/colcon_ws
+        colcon build \
+          --packages-up-to bievr_lio_ros2 \
+          --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo

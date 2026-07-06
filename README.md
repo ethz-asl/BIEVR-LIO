@@ -14,9 +14,9 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/ethz-asl/BIEVR-LIO"><img src="https://shieldcn.dev/badge/-C++-blue?logo=cplusplus&size=xs" /></a>
-<a href="https://github.com/ethz-asl/BIEVR-LIO/actions/workflows/build_20_04.yaml"><img src="https://img.shields.io/github/actions/workflow/status/ethz-asl/BIEVR-LIO/build_20_04.yaml?branch=feature/CI&style=for-the-badge&logo=github&label=Noetic%20Build" alt="Ubuntu 20.04 + ROS Noetic Build" /></a>
-<a href="https://github.com/ethz-asl/BIEVR-LIO/actions/workflows/build_24_04.yaml"><img src="https://img.shields.io/github/actions/workflow/status/ethz-asl/BIEVR-LIO/build_24_04.yaml?branch=feature/CI&style=for-the-badge&logo=github&label=Jazzy%20Build" alt="Ubuntu 24.04 + ROS Jazzy Build" /></a>
+<a href="https://github.com/ethz-asl/BIEVR-LIO/actions/workflows/build_20_04.yaml"><img src="https://shieldcn.dev/github/ethz-asl/BIEVR-LIO/ci.svg?workflow=build_20_04.yaml&label=ROS1%20Noetic&size=xs&variant=outline&mode=light" alt="Ubuntu 20.04 + ROS Noetic Build" /></a>
+<a href="https://github.com/ethz-asl/BIEVR-LIO/actions/workflows/build_22_04.yaml"><img src="https://shieldcn.dev/github/ethz-asl/BIEVR-LIO/ci.svg?workflow=build_22_04.yaml&label=ROS2%20Humble&size=xs&variant=outline&mode=light" alt="Ubuntu 22.04 + ROS Humble Build" /></a>
+<a href="https://github.com/ethz-asl/BIEVR-LIO/actions/workflows/build_24_04.yaml"><img src="https://shieldcn.dev/github/ethz-asl/BIEVR-LIO/ci.svg?workflow=build_24_04.yaml&label=ROS2%20Jazzy&size=xs&variant=outline&mode=light" alt="Ubuntu 24.04 + ROS Jazzy Build" /></a>
 </p>
 
 <p align="center">
